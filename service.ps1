@@ -12,6 +12,12 @@
             SourcePath      = $SourcePath
             DestinationPath = $DestinationPath
             Type            = "Directory"
-        }       
+        } 
+
+       windowsfeature IIS
+	{
+		Ensure = "Present"
+		Name    = "Web-Server"
+	}      
     }
 }
